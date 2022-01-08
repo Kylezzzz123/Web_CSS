@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- piority:
+    1. !important  infinity
+    2. inline 1,0,0,0
+    3. id     0,1,0,0
+    4. class  0,0,1,0
+    5. div/p/h 0,0,0,1
+    6. *
+    -->
+    <style>
+        /* !important is the highest piority */
+        div {
+            color: pink !important;
+        }
+
+        #demo {
+            color: red
+        }
+
+        .test {
+            color: blue
+        }
+
+        body {
+            color: green
+        }
+
+        /* we have to style 'a' alone */
+        a {
+            color: orange
+        }
+
+        /* ul li > li, higher piority */
+        ul li {
+            color: fuchsia
+        }
+
+        li {
+            color: black
+        }
+
+        /* class li > ul li > li, higher piority */
+        .company li {
+            color: khaki
+        }
+    </style>
+</head>
+
+<body>
+    <div class='test' id='demo' style='color:chocolate'>Facebook</div>
+    <a href="#">Sample</a>
+    <ul class='company'>
+        <li>Facebook</li>
+        <li>Apple</li>
+        <li>Amazon</li>
+    </ul>
+</body>
+
+</html>
